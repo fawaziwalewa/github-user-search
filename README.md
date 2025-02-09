@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/fawaziwalewa/github-user-search)
-- [Live Site URL](github-user-search-app-lovat.vercel.app)
+- [Live Site URL](https://github-user-search-app-lovat.vercel.app)
 
 ## My Process
 
