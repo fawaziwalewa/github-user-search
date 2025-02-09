@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Mentor - GitHub User Search App Solution
 
-## Getting Started
+This is my solution to the [GitHub User Search App Challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6). This challenge helped me enhance my skills in React, Next.js, and API integration by building a real-world application.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Frontend Mentor - GitHub User Search App Solution](#frontend-mentor---github-user-search-app-solution)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The Challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My Process](#my-process)
+    - [Built With](#built-with)
+    - [What I Learned](#what-i-learned)
+    - [Continued Development](#continued-development)
+    - [Useful Resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### The Challenge
+
+Users should be able to:
+
+- View an optimal layout for the app based on their device's screen size
+- See hover states for all interactive elements
+- Search for GitHub users by their username
+- Display relevant user information fetched from the GitHub API
+- Switch between light and dark themes
+- **Bonus:** Automatically adapt the color scheme based on the system preferences using `prefers-color-scheme` in CSS
+
+### Screenshot
+
+![GitHub User Search App](/public/images/preview.png)
+
+### Links
+
+- [Solution URL](https://github.com/fawaziwalewa/github-user-search)
+- [Live Site URL](github-user-search-app-lovat.vercel.app)
+
+## My Process
+
+### Built With
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Tailwind CSS
+- Flexbox & CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JavaScript library
+- [Next.js](https://nextjs.org/) - React framework
+- [GitHub API](https://docs.github.com/en/rest)
+
+### What I Learned
+
+During this project, I improved my knowledge of fetching and displaying data from an external API using Next.js. Implementing dynamic theme switching based on system preferences was another key learning aspect.
+
+Here’s an example of handling API requests:
+
+```js
+const fetchGitHubUser = async (username) => {
+  try {
+    const response = await fetch(`https://api.github.com/users/${username}`);
+    if (!response.ok) throw new Error('User not found');
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+  }
+};
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Continued Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Moving forward, I want to:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Improve error handling for better user experience
+- Implement caching to reduce redundant API requests
+- Explore integrating TypeScript for better type safety
+- Add unit and integration tests
 
-## Learn More
+### Useful Resources
 
-To learn more about Next.js, take a look at the following resources:
+- [GitHub API Docs](https://docs.github.com/en/rest) - Helped with understanding API structure
+- [Tailwind CSS](https://tailwindcss.com/docs) - Used for quick styling and responsiveness
+- [Next.js Image Optimization](https://nextjs.org/docs/basic-features/image-optimization) - Helped with handling external images
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Website - [Fawaz Iwalewa](https://iwaola.me)
+- Frontend Mentor - [@fawaziwalewa](https://www.frontendmentor.io/profile/fawaziwalewa)
+- GitHub - [@fawaziwalewa](https://github.com/fawaziwalewa)
+- Twitter - [@IwalewaFawaz](https://twitter.com/IwalewaFawaz)
 
-## Deploy on Vercel
+## Acknowledgments
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+A big thank you to Frontend Mentor for providing this challenge! It helped refine my skills and gain hands-on experience in API integration and UI responsiveness.
